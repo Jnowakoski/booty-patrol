@@ -21,6 +21,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import HomeIcon from '@material-ui/icons/Home'
 import ListIcon from '@material-ui/icons/ViewList'
+import ViewStreamIcon from '@material-ui/icons/ViewStream';
+
 
 const drawerWidth = 240
 
@@ -33,7 +35,7 @@ const useStyles = makeStyles(theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    background: 'linear-gradient(to right,  #663399, #5B72FF)',
+    background: 'linear-gradient(to right,  #ff69b4, #ffffff)',
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -150,10 +152,10 @@ const Header = ({ siteTitle }) => {
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <ListIcon />
+              <ViewStreamIcon />
             </ListItemIcon>
             <ListItemText>
-              <Link to="/components">Components</Link>
+              <Link to="/streams">Streams</Link>
             </ListItemText>
           </ListItem>
         </List>
