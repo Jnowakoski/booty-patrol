@@ -20,6 +20,20 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Done from '@material-ui/icons/Done'
 
+
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "firstPicture.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',

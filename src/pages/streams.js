@@ -11,8 +11,7 @@ import InfoIcon from '@material-ui/icons/Info';
 
 const useStyles = makeStyles(theme => ({
     card: {
-      width: `100%`,
-      minWidth: 620,
+      width:"100%",
     },
     media: {
       height: 0,
@@ -40,10 +39,9 @@ const StreamsPage = () => {
       
     <SEO title="Streams" />
     <h1>Streamers</h1>
-    <Box display="flex" width="100%" height="100%"bgcolor="background.paper">
-    <Box component ="div"  width="100vw" minWidth="620" height='56.25vw'>
+    <Box display="flex" width="100%" height="100%" bgcolor="background.paper" flexBasis='620' flexWrap='wrap'>
     <Card className={classes.card} >
-    <CardActionArea>
+    <CardActionArea >
         <CardMedia
           src="iframe"
           component="iframe"
@@ -63,7 +61,6 @@ const StreamsPage = () => {
         </CardContent>
       </CardActionArea>
     </Card>
-    </Box>
     </Box>
   </Layout>
   )

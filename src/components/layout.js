@@ -11,6 +11,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import './layout.css'
+import { Box } from '@material-ui/core'
 
 const Layout = ({ children }) => {
   return (
@@ -38,6 +39,7 @@ const Layout = ({ children }) => {
             <footer style={{ paddingTop: 10, textAlign:'center'}}>
               Patrolin since 2019
             </footer>
+
           </div>
         </div>
       )}

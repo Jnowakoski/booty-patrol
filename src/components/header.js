@@ -22,7 +22,8 @@ import ListItemText from '@material-ui/core/ListItemText'
 import HomeIcon from '@material-ui/icons/Home'
 import ListIcon from '@material-ui/icons/ViewList'
 import ViewStreamIcon from '@material-ui/icons/ViewStream';
-
+import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
+import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 
 const drawerWidth = 240
 
@@ -156,6 +157,22 @@ const Header = ({ siteTitle }) => {
             </ListItemIcon>
             <ListItemText>
               <Link to="/streams">Streams</Link>
+            </ListItemText>
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <PhotoLibraryIcon />
+            </ListItemIcon>
+            <ListItemText>
+              <Link to="/pictures">The Pix</Link>
+            </ListItemText>
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <QuestionAnswerIcon />
+            </ListItemIcon>
+            <ListItemText>
+              <Link to="/Discord">Discord</Link>
             </ListItemText>
           </ListItem>
         </List>
