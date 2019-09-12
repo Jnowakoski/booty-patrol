@@ -24,6 +24,7 @@ import ListIcon from '@material-ui/icons/ViewList'
 import ViewStreamIcon from '@material-ui/icons/ViewStream';
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
+import DiscordIcon from '../components/discordIcon'
 
 const drawerWidth = 240
 
@@ -169,7 +170,7 @@ const Header = ({ siteTitle }) => {
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <QuestionAnswerIcon />
+              <DiscordIcon/>
             </ListItemIcon>
             <ListItemText>
               <Link to="/Discord">Discord</Link>
