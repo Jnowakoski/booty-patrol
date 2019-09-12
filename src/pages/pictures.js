@@ -26,6 +26,7 @@ const Pictures = ({ data }) => {
   return (
     <Layout>
         <SEO title="Pictures" />
+        
       <h1>The Pix</h1>
       <div className={classes.root}>
         
@@ -34,6 +35,7 @@ const Pictures = ({ data }) => {
           <Img fluid={data.file.childImageSharp.fluid} />
           </GridListTile>
       </GridList>
+      <Img fluid={data.file.childImageSharp.fluid} />
     </div>
      
     </Layout>
@@ -43,7 +45,7 @@ export const query = graphql`
   query {
     file(relativePath: { eq: "guild/firstPicture.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
+        fluid(maxWidth: 1440, quality:100) {
           ...GatsbyImageSharpFluid
         }
       }
