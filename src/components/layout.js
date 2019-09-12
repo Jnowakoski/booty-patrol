@@ -36,6 +36,7 @@ const Layout = ({ children }) => {
             }}
           >
             <main>{children}</main>
+            
             <footer style={{ paddingTop: 10, textAlign:'center'}}>
               Patrolin since 2019
             </footer>

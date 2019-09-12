@@ -6,17 +6,17 @@ import SEO from '../components/seo'
 
 const iframeStyles= {
   width: '100%',
-  height: '100vh'
+  height: '80vh'
 };
 
 const SecondPage = () => (
   <Layout>
     <SEO title="The Discord" />
-    <iframe src="https://discordapp.com/widget?id=616755147472896011&theme=dark"
-    style={iframeStyles}
-    allowtransparency="true" 
-    frameborder="0">
-    </iframe>
+      <iframe src="https://discordapp.com/widget?id=616755147472896011&theme=dark"
+      style={iframeStyles}
+      allowtransparency="true" 
+      frameborder="0">
+      </iframe>
   </Layout>
 )
 

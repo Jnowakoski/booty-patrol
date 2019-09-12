@@ -1,7 +1,8 @@
 import React from 'react';
 
 import Layout from '../components/layout';
-import Image from '../components/image';
+import Cupcake from '../components/cupcake';
+import Alliance from '../components/alliance';
 import SEO from '../components/seo';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -20,19 +21,6 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Done from '@material-ui/icons/Done'
 
-
-
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "firstPicture.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -67,14 +55,19 @@ const IndexPage = () => {
       <Grid container spacing={3} justify="center">
         <Grid item xs={2}>
           <div style={{ maxWidth: `100px`, marginBottom: `1.45rem` }}>
-            <Image />
+            <Cupcake />
           </div>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={4}>
           <h1>Booty Patrol</h1>
           <h5>
             A World of Warcraft classic Guild. Playing on Skarem Realm for the Alliance
           </h5>
+        </Grid>
+        <Grid item xs={2}>
+        <div style={{ maxWidth: `100px`, marginBottom: `1.45rem` }}>
+          <Alliance />
+          </div>
         </Grid>
       </Grid>
       <Divider />
