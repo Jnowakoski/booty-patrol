@@ -26,8 +26,8 @@ module.exports = {
         name: `Booty Patrol`,
         short_name: `BP`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#ff69b4`,
+        theme_color: `#ff69b4`,
         display: `minimal-ui`,
         icon: `src/images/cupcake-6-512.png`, // This path is relative to the root of the site.
       },
