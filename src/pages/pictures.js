@@ -30,26 +30,39 @@ const Pictures = ({ data }) => {
       <h1>The Pix</h1>
       <div className={classes.root}>
         
-      <GridList cellHeight='auto' className={classes.gridList} cols={1}>
-          <GridListTile key='base' cols={1}>
-          <Img fluid={data.file.childImageSharp.fluid} />
+      <GridList cellHeight='auto' className={classes.gridList} cols={2}>
+          <GridListTile key='firstPicture' cols={1}>
+          <Img fluid={data.image1.childImageSharp.fluid} />
+          </GridListTile>
+          <GridListTile key='TheCrewOnAPlank' cols={1}>
+          <Img fluid={data.image2.childImageSharp.fluid} />
           </GridListTile>
       </GridList>
-      <Img fluid={data.file.childImageSharp.fluid} />
     </div>
      
     </Layout>
   )
 }
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "guild/firstPicture.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1440, quality:100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const fluidImage = graphql`
+fragment fluidImage on File {
+  childImageSharp {
+    fluid(maxWidth: 1440, quality:100) {
+      ...GatsbyImageSharpFluid
     }
   }
+}
 `
+
+export const query  = graphql`
+query {
+  image1: file(relativePath: { eq: "guild/firstPicture.png" }) {
+    ...fluidImage
+  }
+  image2: file(relativePath: { eq: "guild/TheCrewOnAPlank.jpg" }) {
+    ...fluidImage
+  }
+}
+`
+
+
 export default Pictures
