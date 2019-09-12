@@ -31,6 +31,9 @@ const Pictures = ({ data }) => {
       <div className={classes.root}>
         
       <GridList cellHeight='auto' className={classes.gridList} cols={2}>
+      <GridListTile key='ScarletKillings' cols={2}>
+          <Img fluid={data.scarletKilling.childImageSharp.fluid} />
+          </GridListTile>
           <GridListTile key='firstPicture' cols={1}>
           <Img fluid={data.image1.childImageSharp.fluid} />
           </GridListTile>
@@ -59,6 +62,9 @@ query {
     ...fluidImage
   }
   image2: file(relativePath: { eq: "guild/TheCrewOnAPlank.jpg" }) {
+    ...fluidImage
+  }
+  scarletKilling: file(relativePath: { eq: "guild/ScarletKillings.jpg" }) {
     ...fluidImage
   }
 }
