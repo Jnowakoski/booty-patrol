@@ -16,8 +16,8 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.paper,
   },
   gridList: {
-    width: '100vw',
-    height: '100vh',
+    width: '100%',
+    height: '100%',
   },
 }));
 
@@ -28,9 +28,10 @@ const Pictures = ({ data }) => {
         <SEO title="Pictures" />
       <h1>The Pix</h1>
       <div className={classes.root}>
+        
       <GridList cellHeight='auto' className={classes.gridList} cols={1}>
           <GridListTile key='base' cols={1}>
-          <Img class='potato' fluid={data.file.childImageSharp.fluid} />
+          <Img fluid={data.file.childImageSharp.fluid} />
           </GridListTile>
       </GridList>
     </div>
@@ -40,9 +41,9 @@ const Pictures = ({ data }) => {
 }
 export const query = graphql`
   query {
-    file(relativePath: { eq: "firstPicture.png" }) {
+    file(relativePath: { eq: "guild/firstPicture.png" }) {
       childImageSharp {
-        fluid(quality: 100) {
+        fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid
         }
       }
