@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   },
   gridList: {
     width: '100%',
-    height: '100%',
+    height: '80vh',
   },
 }));
 
@@ -30,15 +30,24 @@ const Pictures = ({ data }) => {
       <h1>The Pix</h1>
       <div className={classes.root}>
         
-      <GridList cellHeight='auto' className={classes.gridList} cols={2}>
-      <GridListTile key='ScarletKillings' cols={2}>
+      <GridList cellHeight='auto' className={classes.gridList} cols={4}>
+          <GridListTile key='ScarletKillings' cols={4}>
           <Img fluid={data.scarletKilling.childImageSharp.fluid} />
+          </GridListTile>
+          <GridListTile key='TheCrewOnAPlank' cols={2}>
+          <Img fluid={data.image2.childImageSharp.fluid} />
+          </GridListTile>
+          <GridListTile key='UldaKill' cols={2}>
+          <Img fluid={data.uldaKill.childImageSharp.fluid} />
           </GridListTile>
           <GridListTile key='firstPicture' cols={1}>
           <Img fluid={data.image1.childImageSharp.fluid} />
           </GridListTile>
-          <GridListTile key='TheCrewOnAPlank' cols={1}>
-          <Img fluid={data.image2.childImageSharp.fluid} />
+          <GridListTile key='secondsBeforeTheChaos' cols={1}>
+          <Img fluid={data.secondsBeforeTheChaos.childImageSharp.fluid} />
+          </GridListTile>
+          <GridListTile key='briggsxOnAHorse' cols={1}>
+          <Img fluid={data.briggsxOnAHorse.childImageSharp.fluid} />
           </GridListTile>
       </GridList>
     </div>
@@ -65,6 +74,15 @@ query {
     ...fluidImage
   }
   scarletKilling: file(relativePath: { eq: "guild/ScarletKillings.jpg" }) {
+    ...fluidImage
+  }
+  secondsBeforeTheChaos: file(relativePath: { eq: "guild/SecondsBeforeTheChaos.jpg" }) {
+    ...fluidImage
+  }
+  uldaKill: file(relativePath: { eq: "guild/UldaKill.jpg" }) {
+    ...fluidImage
+  }
+  briggsxOnAHorse: file(relativePath: { eq: "guild/BriggsxOnAHorse.png" }) {
     ...fluidImage
   }
 }

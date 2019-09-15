@@ -52,7 +52,7 @@ const IndexPage = () => {
   return(
     <Layout>
       <SEO title="Home" />
-      <Grid container spacing={3} justify="center">
+      <Grid container spacing={2} justify="center">
         <Grid item xs={2}>
           <div style={{ maxWidth: `100px`, marginBottom: `1.45rem` }}>
             <Cupcake />
