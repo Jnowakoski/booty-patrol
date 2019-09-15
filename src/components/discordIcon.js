@@ -8,7 +8,7 @@ const DiscordIcon = ({data}) => (
    // </SvgIcon>
 
    <Icon >
-    <img src="Discord-Logo-Color.svg"/>
+    <img src="/Discord-Logo-Color.svg"/>
     </Icon>
   )
 
