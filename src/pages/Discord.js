@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 
 const iframeStyles= {
   width: '100%',
-  height: '80vh'
+  height: '70vh'
 };
 
 const SecondPage = () => (
